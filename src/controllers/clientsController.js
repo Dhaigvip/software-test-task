@@ -10,7 +10,9 @@ class clientsController {
 
 	// GET - Returns one client by ID
 	static async getOne(req) {
-		const { clientId } = req.params;
+		const {
+			clientId,
+		} = req.params;
 		return ClientModel.getOne(clientId);
 	}
 
@@ -24,14 +26,26 @@ class clientsController {
 		await cacher.cacheAdd(payloadHash, client);
 		return client;
 	}
+	// PATCH - Update a client
+	static async updateOne(req) {
+		await validator.validate('ClientPatchModel', req.body);
+		const {
+			clientId,
+		} = req.params;
+		const client = await ClientModel.updateOne(clientId, req.body);
+		return client;
+	}
 
 	// DELETE - Delete a client
 	static async deleteOne(req) {
-		const { clientId } = req.params;
+		const {
+			clientId,
+		} = req.params;
 
 		await ClientModel.deleteById(clientId);
-
-		return { message: 'success' };
+		return {
+			message: 'success',
+		};
 	}
 }
 

@@ -8,4 +8,4 @@ insert into public.clients(
 	${payloadHash},
 	${firstname},
 	${surname}
-) RETURNING id as client
+) RETURNING id  as client
