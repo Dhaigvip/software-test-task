@@ -4,7 +4,7 @@
     },
 
     "db": {
-        "connString": "postgres://dhaigvip:dhai2619@localhost:5432/customers"
+        "connString": "postgres://postgres:postgres@localhost:5432/postgres"
     },
 
     "logger": {

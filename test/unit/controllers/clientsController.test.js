@@ -1,5 +1,4 @@
 const chai = require('chai');
-const chaiAsPromised = require('chai-as-promised');
 const td = require('testdouble');
 const ClientsController = require('../../../src/controllers/ClientsController');
 const {

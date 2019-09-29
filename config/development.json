@@ -1,2 +1,9 @@
 {
+    "service": {
+        "port": 3100
+    },
+
+    "db": {
+        "connString": "postgres://postgres:postgres@localhost:5432/postgres"
+    }
 }
