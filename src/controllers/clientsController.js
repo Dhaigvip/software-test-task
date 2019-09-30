@@ -41,8 +41,9 @@ class clientsController {
 		const {
 			clientId,
 		} = req.params;
-
+		const client = await ClientModel.getOne(clientId);
 		await ClientModel.deleteById(clientId);
+		if (cacher.isCached(client.payloadHash)) cacher.cache.delete(client.payloadHash);
 		return {
 			message: 'success',
 		};
