@@ -1,10 +1,10 @@
 insert into public.clients(
-	phoneNumber,
+	phonenumber,
 	payloadHash,
 	firstname,
 	surname
 ) values (
-	${phoneNumber},
+	${phonenumber},
 	${payloadHash},
 	${firstname},
 	${surname}

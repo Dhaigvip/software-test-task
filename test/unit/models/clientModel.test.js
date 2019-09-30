@@ -17,7 +17,7 @@ describe('clientModel', () => {
             body: {
                 firstname: 'andres',
                 surname: 'ruutel',
-                phoneNumber: '+44076546546549',
+                phonenumber: '+44076546546549',
             },
         };
 
@@ -39,7 +39,7 @@ describe('clientModel', () => {
             body: {
                 firstname: 'andres',
                 surname: 'ruutel',
-                phoneNumber: '+44076546546549',
+                phonenumber: '+44076546546549',
             },
         };
 
@@ -52,6 +52,6 @@ describe('clientModel', () => {
 
         expect(formattedInput)
             .to.be.an('string')
-            .equals("firstname='andres',surname='ruutel',phoneNumber='+44076546546549'");
+            .equals("firstname='andres',surname='ruutel',phonenumber='+44076546546549'");
     });
 });

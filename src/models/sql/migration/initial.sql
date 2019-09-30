@@ -4,7 +4,7 @@ create extension if not exists pgcrypto;
 create table if not exists public.clients (
     id UUID primary key default gen_random_uuid(),
 	payloadHash varchar(44) UNIQUE not null,
-    phoneNumber varchar(64) not null,
+    phonenumber varchar(64) not null,
 		firstname varchar(64) not null,
 		surname varchar(64) not null
 );

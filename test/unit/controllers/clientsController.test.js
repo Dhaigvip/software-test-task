@@ -57,7 +57,7 @@ describe('clientsController', () => {
     it('#createOne should create one client', async() => {
         const req = {
             body: {
-                phoneNumber: '+4407777712333',
+                phonenumber: '+4407777712333',
                 firstname: 'John',
                 surname: 'Doe',
             },
@@ -138,7 +138,7 @@ describe('clientsController', () => {
             },
             body: {
                 firstname: 'Vipul',
-                phoneNumber: '+4407777712333',
+                phonenumber: '+4407777712333',
             },
         };
 
@@ -157,7 +157,7 @@ describe('clientsController', () => {
                 .has.property('data')
                 .that.has.property('errors')
                 .that.is.an('array')
-                .that.to.have.members(['Target property \'phoneNumber\' is not in the model'])
+                .that.to.have.members(['Target property \'phonenumber\' is not in the model'])
         }
     });
     it('#updateOne should fail due to firstname being null', async() => {
