@@ -48,7 +48,7 @@ describe('clientModel', () => {
             .thenReturn({ valid: true });
 
 
-        const formattedInput = ClientModel.formatter(req.body);
+        const formattedInput = ClientModel.updateQueryformatter(req.body);
 
         expect(formattedInput)
             .to.be.an('string')

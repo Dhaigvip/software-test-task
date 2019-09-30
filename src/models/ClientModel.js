@@ -26,7 +26,7 @@ class ClientModel {
 	// Update client
 	static async updateOne(clientId, clientData) {
 		return db.one(queries.clients.updateOne, {
-			formatter: this.formatter(clientData),
+			updateQueryformatter: this.updateQueryformatter(clientData),
 			clientId,
 		});
 	}
@@ -44,7 +44,7 @@ class ClientModel {
 	}
 
 	//	Dynamically generate update query inputs.
-	static formatter(clientData) {
+	static updateQueryformatter(clientData) {
 		let query = '';
 		Object.keys(clientData).forEach((key) => {
 			query += `${key}='${clientData[key]}',`;

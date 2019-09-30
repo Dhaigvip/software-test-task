@@ -1,4 +1,4 @@
 update  public.clients
-set                 ${formatter:raw}
+set                 ${updateQueryformatter:raw}
 where   id        = ${clientId}
 RETURNING id  as client
